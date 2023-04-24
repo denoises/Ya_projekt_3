@@ -24,7 +24,7 @@ car_images = {
     'Audi': ['audi1.png', 'audi2.png'],
     'BMW': ['bmw1.png', 'bmw2.png', 'bmw3.png', 'bmw4.png', 'bmw5.png'],
     'Mercedes': ['mercedes1.png', 'mercedes2.png', 'mercedes3.png', 'mercedes4.png', 'mercedes5.png'],
-    'Lada': ['lada1.png', 'lada2.png', 'lada3.png'],
+    'Lada': ['lada1.png', 'lada2.png', 'lada3.png', 'lada4.png', 'lada5.png'],
     'Volvo': ['volvo1.png', 'volvo2.png'],
     'Skoda': ['skoda1.png', 'skoda2.png', 'skoda3.png'],
     'ГАЗ': ['gaz1.jpeg'],
@@ -33,7 +33,23 @@ car_images = {
     'Haval': ['haval1.png'],
     'Land Rover': ['lr1.png'],
     'Mazda': ['mazda1.png', 'mazda2.png'],
-    'Toyota': ['t1.png', 't2.png']
+    'Toyota': ['t1.png', 't2.png'],
+    'Fiat': ['fiat1.png', 'fiat2.png'],
+    'Geely': ['geely1.png'],
+    'Lexus': ['lexus1.png', 'lexus2.png', 'lexus3.png'],
+    'Volkswagen': ['volkswagen1.png', 'volkswagen2.png', 'volkswagen3.png', 'volkswagen4.png', 'volkswagen5.png',
+                   'volkswagen6.png'],
+    'Hyundai': ['hyundai1.png', 'hyundai2.png', 'hyundai3.png'],
+    'Infiniti': ['infiniti1.png', 'infiniti2.png'],
+    'Honda': ['honda1.png', 'honda2.png'],
+    'Jaguar': ['jaguar1.png', 'jaguar2.png'],
+    'УАЗ': ['yaz1.png', 'yaz2.png', 'yaz3.png'],
+    'Citroen': ['Citroen.png'],
+    'Renault': ['renault1.png', 'renault2.png', 'renault3.png'],
+    'Opel': ['opel.png', 'opel2.png', 'ope3.png'],
+    'KIA': ['kia1.png', 'kia2.png', 'kia3.png', 'kia4.png', 'kia5.png', 'kia6.png'],
+    'Nissan': ['nissan1.png', 'nissan2.png', 'nissan3.png']
+
 }
 car_brands = list(car_images.keys())
 button_list = car_brands
@@ -52,6 +68,7 @@ async def play(update, context):
     # photo_url = random.choice(car_brand[car_brand])
     print(car_i_g)
     # сохраняем выбранную марку и ее фотографию в контексте
+    print(context)
     context.user_data['car_brand'] = car_brand
     context.user_data['car_image'] = car_image
 
@@ -80,7 +97,8 @@ async def answer(update, context):
     car_brand = context.user_data['car_brand']
 
     if user_answer.lower() == car_brand.lower():
-        await context.bot.send_message(chat_id=update.effective_chat.id, text="Правильно! Вы угадали марку автомобиля.")
+        await context.bot.send_message(chat_id=update.effective_chat.id, text="Правильно! Вы угадали марку автомобиля. "
+                                                                              "Для следующего вопроса напишите /play")
     else:
         await context.bot.send_message(chat_id=update.effective_chat.id, text="Неправильно! Попробуйте еще раз.")
 
