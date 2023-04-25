@@ -23,34 +23,34 @@ dispatcher = Application.builder().token(TOKEN).read_timeout(100).write_timeout(
 
 # создаем словарь марок автомобилей и соответствующих им фотографий
 car_images = {
-    'Audi': ['audi1.png', 'audi2.png'],
+    'Audi': ['audi1.png', 'audi2.png', 'audi3.jpeg', 'audi4.png'],
     'BMW': ['bmw1.png', 'bmw2.png', 'bmw3.png', 'bmw4.png', 'bmw5.png'],
     'Mercedes': ['mercedes1.png', 'mercedes2.png', 'mercedes3.png', 'mercedes4.png', 'mercedes5.png'],
     'Lada': ['lada1.png', 'lada2.png', 'lada3.png', 'lada4.png', 'lada5.png'],
     'Volvo': ['volvo1.png', 'volvo2.png'],
     'Skoda': ['skoda1.png', 'skoda2.png', 'skoda3.png'],
     'ГАЗ': ['gaz1.jpeg'],
-    'Chevrolet': ['chevrolet1.png'],
-    'Ford': ['ford1.png'],
+    'Chevrolet': ['chevrolet1.png', 'chevrolet2.png'],
+    'Ford': ['ford1.png', 'ford2.png', 'ford3.png'],
     'Haval': ['haval1.png'],
-    'Land Rover': ['lr1.png'],
-    'Mazda': ['mazda1.png', 'mazda2.png'],
+    'Land Rover': ['lr1.png', 'lr2.png'],
+    'Mazda': ['mazda1.png', 'mazda2.png', 'mazda3.png'],
     'Toyota': ['t1.png', 't2.png'],
-    'Fiat': ['fiat1.png', 'fiat2.png'],
+    'Fiat': ['fiat1.png', 'fiat2.png', 'fiat3.jpg'],
     'Geely': ['geely1.png'],
     'Lexus': ['lexus1.png', 'lexus2.png', 'lexus3.png'],
     'Volkswagen': ['volkswagen1.png', 'volkswagen2.png', 'volkswagen3.png', 'volkswagen4.png', 'volkswagen5.png',
-                   'volkswagen6.png'],
-    'Hyundai': ['hyundai1.png', 'hyundai2.png', 'hyundai3.png'],
+                   'volkswagen6.png', 'volkswagen7.jpeg', 'volkswagen8.png'],
+    'Hyundai': ['hyundai1.png', 'hyundai2.png', 'hyundai3.png', 'hyundai4.png' 'hyundai5.png'],
     'Infiniti': ['infiniti1.png', 'infiniti2.png'],
     'Honda': ['honda1.png', 'honda2.png'],
     'Jaguar': ['jaguar1.png', 'jaguar2.png'],
     'УАЗ': ['yaz1.png', 'yaz2.png', 'yaz3.png'],
     'Citroen': ['Citroen.png'],
-    'Renault': ['renault1.png', 'renault2.png', 'renault3.png'],
+    'Renault': ['renault1.png', 'renault2.png', 'renault3.png', 'renault4.png'],
     'Opel': ['opel.png', 'opel2.png', 'ope3.png'],
-    'KIA': ['kia1.png', 'kia2.png', 'kia3.png', 'kia4.png', 'kia5.png', 'kia6.png'],
-    'Nissan': ['nissan1.png', 'nissan2.png', 'nissan3.png']
+    'KIA': ['kia1.png', 'kia2.png', 'kia3.png', 'kia4.png', 'kia5.png', 'kia6.png', 'kia7.jpeg'],
+    'Nissan': ['nissan1.png', 'nissan2.png', 'nissan3.png', 'nissan4.png']
 
 }
 car_brands = list(car_images.keys())
